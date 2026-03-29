@@ -1,6 +1,12 @@
 # Canvas Relay Protocol (CRP) — 灵感接力协议
 
-> 利用 Google Gemini Canvas 预览环境的自动鉴权特性，通过中转接力的方式，让任何外部应用免费调用 Gemini 2.5 系列模型。
+> 利用 Google Gemini Canvas 预览环境的自动鉴权特性，通过中转接力的方式，让任何外部应用免费调用 Gemini 全系列模型（Flash、Pro 等）。
+
+## 演示视频
+
+https://github.com/user-attachments/assets/demo.mp4
+
+> 以上为使用聊天客户端通过 CRP 调用 Gemini 的案例演示。这只是一个最简实现——基于同样的反向代理思路，你可以将其扩展为 API 网关、多模型路由、批量任务处理等更多场景。
 
 ## 架构拓扑
 
@@ -17,7 +23,9 @@
 
 Google Gemini 的 Canvas 预览环境中，系统会通过 Service Worker 自动在发往 `generativelanguage.googleapis.com` 的请求 Header 中注入当前用户的 OAuth2 临时令牌。
 
-CRP 利用这一特性，将 Canvas 预览环境作为一个**受控执行节点（Worker）**：
+由于鉴权令牌是用户级别的 OAuth2 Token，不绑定特定模型，因此可以调用所有 Gemini 模型（Flash、Pro 等），只需修改请求中的模型名称即可。
+
+CRP 利用这一特性，将 Canvas 预览环境作为一个**受控执行���点（Worker）**：
 
 1. **外部客户端**提交问题到中转站
 2. **Canvas 打工仔**轮询中转站领取任务，调用 Gemini API（自动鉴权，无需 API Key）
