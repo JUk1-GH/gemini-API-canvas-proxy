@@ -46,8 +46,8 @@ CRP 利用这一特性，将 Canvas 预览环境作为一个**受控执行��
 
 ```bash
 # 克隆仓库
-git clone https://github.com/YOUR_USERNAME/canvas-relay-protocol.git
-cd canvas-relay-protocol
+git clone https://github.com/YOUR_USERNAME/gemini-API-canvas-proxy.git
+cd gemini-API-canvas-proxy
 
 # 安装依赖并启动
 npm install

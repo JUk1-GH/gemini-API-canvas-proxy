@@ -1,5 +1,5 @@
 {
-  "name": "canvas-relay-protocol",
+  "name": "gemini-api-canvas-proxy",
   "version": "1.0.0",
   "description": "Canvas Relay Protocol (CRP) - 利用 Gemini Canvas 自动鉴权特性的灵感接力协议",
   "main": "relay-server.js",
