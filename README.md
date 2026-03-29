@@ -4,7 +4,7 @@
 
 ## 演示视频
 
-https://github.com/user-attachments/assets/demo.mp4
+[https://github.com/user-attachments/assets/demo.mp4](https://github.com/user-attachments/assets/61bd792f-e5bd-4b58-a4c8-eae0699e2158)
 
 > 以上为使用聊天客户端通过 CRP 调用 Gemini 的案例演示。这只是一个最简实现——基于同样的反向代理思路，你可以将其扩展为 API 网关、多模型路由、批量任务处理等更多场景。
 
